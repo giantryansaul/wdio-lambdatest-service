@@ -33,6 +33,7 @@ export default class LambdaRestService {
   _currentTestTitle;
 
   constructor(options = {}, capabilities = {}, config = {}) {
+    console.log('::LambdaRestService::')
     this._options = { ...DEFAULT_OPTIONS, ...options };
     this._capabilities = capabilities;
     this._config = config;
@@ -47,6 +48,7 @@ export default class LambdaRestService {
   }
 
   before(caps, specs, browser) {
+    console.log('::LambdaRestService::before')
     this._browser = browser;
     this._scenariosThatRan = [];
   }

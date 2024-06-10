@@ -13,10 +13,12 @@ export default class LambdaTestLauncher {
     options
 
     constructor(options) {
+        console.log('::LambdaTestLauncher::')
         this.options = options
     }
 
     configureCapabilities(capabilities, key, value) {
+        console.log('::LambdaTestLauncher::configureCapabilities')
         const updateCapability = (capability) => {
             if (capability['lt:options']) {
                 capability['LT:Options'] = { ...capability['lt:options'] };
